@@ -1,0 +1,54 @@
+@import "../../assets/mixins";
+
+.workspace-list--type {
+  .workspace-list--dropdown {
+    .workspace-dropdown--title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: $color-white;
+      font-weight: 500;
+      svg {
+        width: 15px;
+        height: 15px;
+      }
+
+      button {
+        padding: 5px;
+      }
+    }
+    .workspace-dropdown--content {
+      p,
+      span {
+        color: $color-white;
+      }
+    }
+  }
+}
+
+.workspace-main--survey-container {
+  overflow: hidden;
+  .workspace-main--survey-header {
+    border-top: 1px solid $color-light-silver;
+    border-bottom: 1px solid $color-light-silver;
+
+    padding: 0.5rem;
+    ul {
+      display: flex;
+      align-items: center;
+      li {
+        margin-right: 1.5rem;
+        cursor: pointer;
+        color: $color-light-black !important;
+        &.active {
+          color: $color-black;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  .workspace-main--survey-content {
+    height: 100vh;
+    background-color: $color-bright-gray;
+  }
+}

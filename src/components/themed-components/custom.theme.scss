@@ -1,0 +1,166 @@
+// ===== Theme Button css starts ======================== //
+.themed-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  border-radius: 4px;
+  gap: 4px;
+  font-weight: 500;
+  &.sm {
+    padding: 8px;
+  }
+  &.md {
+    padding: 12px 24px;
+  }
+  &.lg {
+    padding: 14px 24px;
+  }
+  &.primary {
+    background-color: $color-violet;
+    color: $color-white;
+  }
+  &.light {
+    background-color: $color-white;
+    color: $color-black;
+  }
+  &.outlined {
+    border: 1px solid $color-violet;
+    color: $color-violet;
+    &:hover,
+    &:focus {
+      background-color: $color-violet;
+      color: $color-white;
+      box-shadow: inset 6.5em 0 0 0 $color-violet;
+    }
+  }
+  &.link {
+    background-color: transparent;
+  }
+  &.themed-button-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+// ===== Theme Button css ends ======================== //
+
+// ===== Theme Input css starts ======================== //
+
+.themed-form-group {
+  .themed-input-label {
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    display: inline-flex;
+  }
+
+  .themed-form-control {
+    position: relative;
+    .theme-control-icon {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      left: 5px;
+    }
+    .themed-input-control {
+      border: 1px solid $color-black;
+      padding: 14px;
+      width: 100%;
+      display: block;
+    }
+    .themed-select-control {
+      border: 1px solid $color-black;
+      padding: 7px;
+      width: 100%;
+      display: block;
+      padding-right: 10px;
+    }
+  }
+}
+
+// ===== Theme input css ends ======================== //
+
+// ===== Theme checkbox css starts ====================== //
+
+.themed-checkbox-group {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+
+  cursor: pointer;
+  font-size: 15px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    &:checked {
+      ~ {
+        .checkmark {
+          background-color: $color-black;
+          &:after {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  .checkmark {
+    &:after {
+      left: 6px;
+      top: 2px;
+      width: 5px;
+      height: 10px;
+      border: solid white;
+      border-width: 0 3px 3px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+  }
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: $color-white;
+  border: 2px solid $color-black;
+  &:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+}
+
+// ===== Theme checkbox css ends ======================== //
+
+// ===== Theme tabs css starts ====================== //
+
+.themed-tabs--wrapper {
+  border: 1px solid $color-black;
+  display: inline-flex;
+  width: 100%;
+  padding: 5px;
+  .tabs--option {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    &.active {
+      background-color: $color-light-silver;
+    }
+  }
+}
